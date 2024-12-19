@@ -18,7 +18,7 @@ public class SimpleHttpServer {
         server.createContext("/test", new HttpHandler() {
             @Override
             public void handle(HttpExchange exchange) throws IOException {
-                String response = "Hello, World!";
+                String response = "Hello, World! __new";
                 exchange.sendResponseHeaders(200, response.getBytes().length);
                 OutputStream os = exchange.getResponseBody();
                 os.write(response.getBytes());
